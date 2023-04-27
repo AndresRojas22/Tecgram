@@ -12,13 +12,15 @@ class ImagenController extends Controller
     {
         $image = $request->file('file');
 
-        $imageName = Str::uuid().".".$image->extension();
+        $imageName = Str::uuid() . "." . $image->extension();
 
         $serverImage = Image::make($image);
-        $serverImage -> fit(500,500);
-        $routeImage = public_path('uploads')."/".$imageName;
 
-        $serverImage=save($routeImage);
+        $serverImage->fit(500, 500);
+
+        $routeImage = public_path('uploads') . '/' . $imageName;
+
+        $serverImage->save($routeImage);
 
         return response()->json(['image'=>$imageName]);
     }

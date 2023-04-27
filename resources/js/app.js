@@ -14,5 +14,5 @@ const dropzone = new Dropzone('#dropzone',{
 });
 
 dropzone.on('success', function(file,response){
- console.log(response);
+ console.log(response)
 });
