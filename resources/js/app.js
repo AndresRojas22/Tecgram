@@ -11,4 +11,8 @@ const dropzone = new Dropzone('#dropzone',{
     dictRemoveFile: 'Delete picture',
     maxFiles: 1,
     uploadMultiple: false,
-})
+});
+
+dropzone.on('success', function(file,response){
+ console.log(response);
+});
