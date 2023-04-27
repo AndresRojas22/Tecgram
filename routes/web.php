@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 
@@ -34,3 +35,5 @@ Route::post('/logout',[LogoutController::class,'store'])->name('logout.store');
 Route::get('/{user:username}',[FeedController::class,'index'])->name('Feed.index');
 
 Route::get('/Feed/create',[FeedController::class,'create'])->name('Feed.create');
+
+Route::post('/Imagenes',[ImagenController::class,'store'])->name('Images.store');
