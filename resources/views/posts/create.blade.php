@@ -51,7 +51,7 @@
                 </div>
 
                 <input class="hover:bg-sky-700 cursor-pointer w-full bg-sky-600 text-white p-2 rounded-lg" type="submit"
-                    value="Sign up">
+                    value="Post">
             </form>
         </div>
     @endsection

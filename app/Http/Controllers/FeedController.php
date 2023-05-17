@@ -29,7 +29,6 @@ class FeedController extends Controller
             'title'=>['required','max:255'],
             'caption' => ['required'],
             'image' => ['required']
-
         ]);
     }
 
