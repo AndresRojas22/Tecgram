@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -30,6 +31,15 @@ class FeedController extends Controller
             'caption' => ['required'],
             'image' => ['required']
         ]);
-    }
 
+    Post::create([
+        'title' => $request->title,
+        'caption' => $request->caption,
+        'image' => $request->image,
+        'user_id' => auth()->user()->id
+    ]);
+ 
+    return redirect()->route('Feed.index',auth()->user()->username);
+    
+    }
 }

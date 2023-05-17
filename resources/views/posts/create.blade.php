@@ -24,18 +24,18 @@
                 @method('Post')
                 @csrf
                 <div class="mb-5">
-                    <label class="mb-2 block font-bold" for="Title">Title</label>
-                    <input class="border w-full p-1 rounded-lg @error('Title') border-red-500 @enderror" type="text"
-                        name="Title" id="Title" value="{{ old('Title') }}">
+                    <label class="mb-2 block font-bold" for="title">Title</label>
+                    <input class="border w-full p-1 rounded-lg @error('title') border-red-500 @enderror" type="text"
+                        name="title" id="title" value="{{ old('title') }}">
                     @error('title')
                         <p class="text-red-600 font-bold">{{ $message }}</p>
                     @enderror
                 </div>
 
                 <div class="mb-5">
-                    <label class="mb-2 block font-bold" for="Caption">Caption</label>
-                    <textarea class="border w-full p-1 rounded-lg @error('Caption') border-red-500 @enderror" type="text" name="Caption"
-                        id="Caption">{{ old('Caption') }}</textarea>
+                    <label class="mb-2 block font-bold" for="caption">Caption</label>
+                    <textarea class="border w-full p-1 rounded-lg @error('caption') border-red-500 @enderror" type="text" name="caption"
+                        id="caption">{{ old('caption') }}</textarea>
                     @error('caption')
                         <p class="text-red-600 font-bold">{{ $message }}</p>
                     @enderror
