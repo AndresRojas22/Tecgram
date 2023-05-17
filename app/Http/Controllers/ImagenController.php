@@ -14,7 +14,7 @@ class ImagenController extends Controller
 
         $imageName = Str::uuid() . "." . $image->extension();
 
-        $serverImage = Image::make($image);
+        $serverImage = Image::make($image); //
 
         $serverImage->fit(500, 500);
 
